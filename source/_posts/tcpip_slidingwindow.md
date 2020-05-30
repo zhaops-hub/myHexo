@@ -10,7 +10,7 @@ copyright: ture
 
 ---
 
-![](tcpip_sindingwindow/1.png)
+![](tcpip_slidingwindow/1.png)
 
 滑动窗口协议（Sliding Window Protocol），属于TCP协议的一种应用，用于网络数据传输时的流量控制，以避免拥塞的发生。该协议允许发送方在停止并等待确认前发送多个数据分组。由于发送方不必每发一个分组就停下来等待确认，因此该协议可以加速数据的传输，提高网络吞吐量
 
@@ -51,7 +51,7 @@ TCP是一个广域网协议，而广域网环境下的路由器和主机，各�
 
 TCP建立连接的初始，B会告诉A自己的接收窗口大小，比如为‘20’：字节31-50为发送窗口。
 
-![](tcpip_sindingwindow/2.png)
+![](tcpip_slidingwindow/2.png)
 
 
 
@@ -59,7 +59,7 @@ TCP建立连接的初始，B会告诉A自己的接收窗口大小，比如为‘
 
 A发送11个字节后，发送窗口位置不变，B接收到了乱序的数据分组：
 
-![](tcpip_sindingwindow/3.png)
+![](tcpip_slidingwindow/3.png)
 
 
 
@@ -67,7 +67,7 @@ A发了11个字节数据
 
 只有当A成功发送了数据，即发送的数据得到了B的确认之后，才会移动滑动窗口离开已发送的数据；同时B则确认连续的数据分组，对于乱序的分组则先接收下来，避免网络重复传递：
 
-![](tcpip_sindingwindow/4.png)
+![](tcpip_slidingwindow/4.png)
 
 A收到新的确认号，窗口向前滑动
 
@@ -75,7 +75,7 @@ A收到新的确认号，窗口向前滑动
 
 
 
-​												![](tcpip_sindingwindow/5.png)
+​												![](tcpip_slidingwindow/5.png)
 
 
 
@@ -85,7 +85,7 @@ A收到新的确认号，窗口向前滑动
 
 ​	
 
-​	![](tcpip_sindingwindow/6.png)
+​	![](tcpip_slidingwindow/6.png)
 
 
 
